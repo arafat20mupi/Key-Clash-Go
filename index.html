@@ -8,6 +8,92 @@
     <script src="https://cdn.tailwindcss.com"></script> 
 </head>
 <body>
-    
+    <main class="font-sans min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
+        <section id="game-join"
+            class="  min-h-screen text-white flex justify-center items-center">
+            <div class="flex flex-col items-center gap-10">
+                <h1 class="text-6xl lg:text-8xl font-serif uppercase font-black">Key Clash Go</h1>
+                <p class="text-xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <button onclick="play()" class="bg-slate-600 hover:bg-slate-300 p-3 rounded-lg hover:text-slate-900 ">Play Now</button>
+            </div>
+        </section>
+
+        <section id="game-play" class=" hidden">
+            <div class="flex flex-col justify-center items-center pt-16 space-y-8">
+                <!-- ---- Word -->
+                <div>
+                    <div class="w-[952px] h-[305px] bg-[#FFFFFFB3] border-[20px] border-[#010313CC]">
+                        <div class="flex justify-center">
+                            <p class="text-white bg-[#2F2941] px-5 pb-3 rounded-b-xl">Don't watch keyboard  while playing...</p>
+                        </div>
+                        <div class="flex justify-center items-center h-full">
+                            <p id='tNum' class="text-8xl font-bold text-black uppercase">Y</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- -----keybord  -->
+                <div>
+                    <div class="flex justify-center gap-3 my-3 w-full">
+                        <kbd class="kbd">q</kbd>
+                        <kbd class="kbd">w</kbd>
+                        <kbd class="kbd">e</kbd>
+                        <kbd class="kbd">r</kbd>
+                        <kbd class="kbd">t</kbd>
+                        <kbd class="kbd">y</kbd>
+                        <kbd class="kbd">u</kbd>
+                        <kbd class="kbd">i</kbd>
+                        <kbd class="kbd">o</kbd>
+                        <kbd class="kbd">p</kbd>
+                    </div> 
+                    <div class="flex justify-center gap-3 my-3 w-full">
+                        <kbd class="kbd">a</kbd>
+                        <kbd class="kbd">s</kbd>
+                        <kbd class="kbd">d</kbd>
+                        <kbd class="kbd">f</kbd>
+                        <kbd class="kbd">g</kbd>
+                        <kbd class="kbd">h</kbd>
+                        <kbd class="kbd">j</kbd>
+                        <kbd class="kbd">k</kbd>
+                        <kbd class="kbd">l</kbd>
+                    </div> 
+                    <div class=" flex justify-center gap-3 my-3 w-full">
+                        <kbd class="kbd">z</kbd>
+                        <kbd class="kbd">x</kbd>
+                        <kbd class="kbd">c</kbd>
+                        <kbd class="kbd">v</kbd>
+                        <kbd class="kbd">b</kbd>
+                        <kbd class="kbd">n</kbd>
+                        <kbd class="kbd">m</kbd>
+                        <kbd class="kbd">/</kbd>
+                    </div>
+                </div>
+                <!-- ----- button---- -->
+                <div class="flex justify-between w-3/4">
+                    <button class="space-x-1 px-3 py-2 flex rounded-full bg-[#894189] hover:bg-purple-800 text-white">
+                        <p>Life</p>
+                        <img src="./images/Group 23.svg" alt="Life">
+                        <span>1</span>
+                    </button>
+                    <button class="px-3 py-2 flex rounded-full text-white bg-[#360490] hover:bg-[#291849] space-x-1 ">
+                        <p>Score</p>
+                        <img src="./images/monetization_on.svg" alt="$">
+                        <span>1</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="hidden game-score flex justify-center items-center h-screen">
+            <div class="text-white  text-center space-y-8 bg-[#FFFFFF33] p-10 rounded-xl">
+                <div class="text-6xl ">
+                    <span >Score:</span>
+                    <span>14</span>
+                </div>
+                <button class="px-4 py-2 bg-slate-50 hover:bg-slate-400 text-black rounded-lg">Play Agian</button>
+                <p class="">Practice will make you Pro</p>
+            </div>
+        </section>
+    </main>
+    <script src="./script/clash.js"></script>
 </body>
 </html>

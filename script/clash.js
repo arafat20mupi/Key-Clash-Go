@@ -13,15 +13,18 @@ function genarateAAlphabate(){
     const randomNum = Math.random() * 25;
     const index = Math.round(randomNum);
     const alpha = alfa[index]
-    // return alpha
-    console.log(alpha)
+    return alpha
+    // console.log(alpha)
 }
-
+function setAlphabetId(elementId){
+    const element = document.getElementById(elementId)
+    element.classList.add('bg-orange-400')
+}
 function continueGame(){
     const newNum = genarateAAlphabate()
-    // const newValue = document.getElementById(tNum)
-    // newValue.innerText === newNum
-    
+    const newValue = document.getElementById("tNum")
+    newValue.innerText = newNum
+    setAlphabetId(newNum)
 } 
 
 
@@ -29,8 +32,7 @@ function continueGame(){
 function play(){
     hideElementById('game-join');
     removeElementById('game-play');
-    continueGame();
-    
+    continueGame();  
 }
 
 

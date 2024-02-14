@@ -17,7 +17,6 @@
                 <button onclick="play()" class="bg-slate-600 hover:bg-slate-300 p-3 rounded-lg hover:text-slate-900 ">Play Now</button>
             </div>
         </section>
-
         <section id="game-play" class=" hidden">
             <div class="flex flex-col justify-center items-center pt-16 space-y-8">
                 <!-- ---- Word -->
@@ -72,28 +71,30 @@
                     <button class="space-x-1 px-3 py-2 flex rounded-full bg-[#894189] hover:bg-purple-800 text-white">
                         <p>Life</p>
                         <img src="./images/Group 23.svg" alt="Life">
-                        <span>1</span>
+                        <span id="carentLife">5</span>
                     </button>
                     <button class="px-3 py-2 flex rounded-full text-white bg-[#360490] hover:bg-[#291849] space-x-1 ">
                         <p>Score</p>
                         <img src="./images/monetization_on.svg" alt="$">
-                        <span>1</span>
+                        <span id="carentScore">0</span>
                     </button>
                 </div>
             </div>
         </section>
 
-        <section class="hidden game-score flex justify-center items-center h-screen">
+        <section id="scoreSection" class="hidden game-score flex justify-center items-center h-screen">
             <div class="text-white  text-center space-y-8 bg-[#FFFFFF33] p-10 rounded-xl">
+                <h2 class="text-3xl">Game over!</h2>
                 <div class="text-6xl ">
                     <span >Score:</span>
-                    <span>14</span>
+                    <span id="finalScore">14</span>
                 </div>
-                <button class="px-4 py-2 bg-slate-50 hover:bg-slate-400 text-black rounded-lg">Play Agian</button>
+                <button onclick="play()" class="px-4 py-2 bg-slate-50 hover:bg-slate-400 text-black rounded-lg">Play Agian</button>
                 <p class="">Practice will make you Pro</p>
             </div>
         </section>
     </main>
+	<script src="./script/store.js"></script>
     <script src="./script/clash.js"></script>
 </body>
 </html>
